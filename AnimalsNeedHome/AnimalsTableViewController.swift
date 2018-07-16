@@ -17,7 +17,7 @@ class AnimalsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(arrayList.sex+arrayList.type+arrayList.year)
+        //print(arrayList.sex+arrayList.type+arrayList.year)
         let type = arrayList.type as String
         let sex = arrayList.sex as String
         let year = arrayList.year as String
@@ -93,6 +93,9 @@ class AnimalsTableViewController: UITableViewController {
         let WebViewController = storyBoard.instantiateViewController(withIdentifier: "animalResult") as! WebViewController
         WebViewController.stringArray.append(String(animals.id))
         WebViewController.stringArray.append(String(animals.tid))
+        WebViewController.stringArray.append(animals.name as! String)
+        WebViewController.stringArray.append(animals.acceptnum as! String)
+        WebViewController.stringArray.append(arrayList.type)
         self.show(WebViewController, sender: "Web")
     }
 

@@ -280,12 +280,19 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendEmail:" destination="qJK-pV-gM9" eventType="touchUpInside" id="ERO-1I-lyN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-rM-GTN">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
                                         <state key="normal" title="寵物所在地">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="findAnimals:" destination="qJK-pV-gM9" eventType="touchUpInside" id="Vdd-QI-FWg"/>
+                                            <segue destination="gxj-8M-swk" kind="show" id="Oc4-KT-lQ3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -305,6 +312,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cru-71-OvL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RFc-K2-1ql">
+                        <barButtonItem key="backBarButtonItem" title="回上一頁" id="2Ee-o7-VyJ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn_adopt" destination="YdU-kU-amZ" id="An2-1a-KZ9"/>
                         <outlet property="btn_location" destination="d2a-rM-GTN" id="ygx-PI-div"/>
@@ -314,6 +324,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8Z-f9-xAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3397.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="tFU-zh-wtB">
+            <objects>
+                <viewController storyboardIdentifier="mapview" id="gxj-8M-swk" customClass="MapViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="icJ-Ej-EcH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CCh-dR-F3o">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CCh-dR-F3o" firstAttribute="top" secondItem="ljS-8N-Sza" secondAttribute="top" id="PbG-mc-it3"/>
+                            <constraint firstItem="CCh-dR-F3o" firstAttribute="trailing" secondItem="ljS-8N-Sza" secondAttribute="trailing" id="fsg-W4-fOR"/>
+                            <constraint firstItem="CCh-dR-F3o" firstAttribute="leading" secondItem="ljS-8N-Sza" secondAttribute="leading" id="ipQ-lY-qub"/>
+                            <constraint firstItem="CCh-dR-F3o" firstAttribute="bottom" secondItem="ljS-8N-Sza" secondAttribute="bottom" id="mzs-s8-0mM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ljS-8N-Sza"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainMapview" destination="CCh-dR-F3o" id="DgY-a5-AWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5C-ut-PJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4169" y="133"/>
         </scene>
     </scenes>
     <resources>

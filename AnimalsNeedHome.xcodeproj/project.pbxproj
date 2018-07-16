@@ -20,6 +20,8 @@
 		F66B212B20F8ADE90027D8EA /* AnimalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B212A20F8ADE90027D8EA /* AnimalsTableViewCell.swift */; };
 		F66B212D20F8B0550027D8EA /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B212C20F8B0550027D8EA /* AnimalData.swift */; };
 		F66B212F20FC66BE0027D8EA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B212E20FC66BE0027D8EA /* WebViewController.swift */; };
+		F66B213120FC86B10027D8EA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66B213020FC86B10027D8EA /* MapKit.framework */; };
+		F66B213320FC87ED0027D8EA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B213220FC87ED0027D8EA /* MapViewController.swift */; };
 		FA3E6ED3C4359590E4979380 /* Pods_AnimalsNeedHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB497DD03DDAFFF4DBD3CFFD /* Pods_AnimalsNeedHome.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		F66B212A20F8ADE90027D8EA /* AnimalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewCell.swift; sourceTree = "<group>"; };
 		F66B212C20F8B0550027D8EA /* AnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
 		F66B212E20FC66BE0027D8EA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F66B213020FC86B10027D8EA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F66B213220FC87ED0027D8EA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB497DD03DDAFFF4DBD3CFFD /* Pods_AnimalsNeedHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalsNeedHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66B213120FC86B10027D8EA /* MapKit.framework in Frameworks */,
 				FA3E6ED3C4359590E4979380 /* Pods_AnimalsNeedHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +64,7 @@
 		1C6DA1160C08EF2ECE4923AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F66B213020FC86B10027D8EA /* MapKit.framework */,
 				FB497DD03DDAFFF4DBD3CFFD /* Pods_AnimalsNeedHome.framework */,
 			);
 			name = Frameworks;
@@ -108,6 +114,7 @@
 				F66B212A20F8ADE90027D8EA /* AnimalsTableViewCell.swift */,
 				F66B212C20F8B0550027D8EA /* AnimalData.swift */,
 				F66B212E20FC66BE0027D8EA /* WebViewController.swift */,
+				F66B213220FC87ED0027D8EA /* MapViewController.swift */,
 			);
 			path = AnimalsNeedHome;
 			sourceTree = "<group>";
@@ -146,6 +153,11 @@
 				TargetAttributes = {
 					F66B210920F88E700027D8EA = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -224,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66B213320FC87ED0027D8EA /* MapViewController.swift in Sources */,
 				F66B211020F88E700027D8EA /* ViewController.swift in Sources */,
 				F66B212D20F8B0550027D8EA /* AnimalData.swift in Sources */,
 				F66B212720F8A42F0027D8EA /* Animals.swift in Sources */,
