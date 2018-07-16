@@ -1,0 +1,6 @@
+framework module Pods_AnimalsNeedHome {
+  umbrella header "Pods-AnimalsNeedHome-umbrella.h"
+
+  export *
+  module * { export * }
+}

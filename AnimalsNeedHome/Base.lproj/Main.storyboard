@@ -1,24 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="khq-Qz-dtR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Ifx-rS-EOu">
+            <objects>
+                <navigationController id="khq-Qz-dtR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0c4-gw-Epx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RMn-Yf-hd7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5R-ka-eKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="134"/>
+        </scene>
+        <!--選擇種類-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TW1-zK-zOB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVb-3c-o0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <state key="normal" image="dog_dark"/>
+                                        <connections>
+                                            <action selector="tab_dog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPJ-if-EgW"/>
+                                            <segue destination="rlP-Do-BBo" kind="show" identifier="Dog" id="eGN-Nk-NUE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTM-CA-Asn">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
+                                        <state key="normal" title="Page2" image="cat_dark"/>
+                                        <connections>
+                                            <action selector="tab_cat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2e-sf-b22"/>
+                                            <segue destination="rlP-Do-BBo" kind="show" identifier="Cat" id="naw-6R-nD8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-Ev-Xl6">
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
+                                        <state key="normal" title="Page3" image="other_dark"/>
+                                        <connections>
+                                            <action selector="tab_other:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fm-dg-2a9"/>
+                                            <segue destination="rlP-Do-BBo" kind="show" identifier="Other" id="nOC-CS-v9f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TW1-zK-zOB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M3t-hr-dUv"/>
+                            <constraint firstItem="TW1-zK-zOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZT2-eA-OLW"/>
+                            <constraint firstAttribute="bottom" secondItem="TW1-zK-zOB" secondAttribute="bottom" id="wKk-tT-Bwh"/>
+                            <constraint firstAttribute="trailing" secondItem="TW1-zK-zOB" secondAttribute="trailing" id="y2c-R7-7WH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="選擇種類" id="lSB-7j-tL1"/>
+                    <connections>
+                        <outlet property="btn_cat" destination="nTM-CA-Asn" id="6jD-dH-aP7"/>
+                        <outlet property="btn_dog" destination="jVb-3c-o0W" id="53h-pk-NEY"/>
+                        <outlet property="btn_other" destination="0Ds-Ev-Xl6" id="ell-Ud-NFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--選擇性別-->
+        <scene sceneID="KqJ-hj-ECG">
+            <objects>
+                <viewController id="rlP-Do-BBo" customClass="GenderViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTc-x0-EJD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Kf-li-pJp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlY-Vm-ABZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <state key="normal" title="Button" image="man"/>
+                                        <connections>
+                                            <segue destination="5Om-EI-Rv5" kind="show" identifier="Woman" id="xz4-Xx-d9G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fep-fy-UWp">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
+                                        <state key="normal" title="Button" image="woman"/>
+                                        <connections>
+                                            <segue destination="5Om-EI-Rv5" kind="show" identifier="Man" id="4Uv-SZ-Ps7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncu-ds-7HH">
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
+                                        <state key="normal" title="Button" image="mix"/>
+                                        <connections>
+                                            <segue destination="5Om-EI-Rv5" kind="show" identifier="Mix" id="q4s-CM-Xmu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dmg-rJ-wz8" firstAttribute="trailing" secondItem="0Kf-li-pJp" secondAttribute="trailing" id="aUN-nT-D0n"/>
+                            <constraint firstItem="Dmg-rJ-wz8" firstAttribute="bottom" secondItem="0Kf-li-pJp" secondAttribute="bottom" id="eAh-D8-Xj4"/>
+                            <constraint firstItem="0Kf-li-pJp" firstAttribute="top" secondItem="Dmg-rJ-wz8" secondAttribute="top" id="iKl-nn-D6K"/>
+                            <constraint firstItem="0Kf-li-pJp" firstAttribute="leading" secondItem="Dmg-rJ-wz8" secondAttribute="leading" id="zhK-ou-vkC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dmg-rJ-wz8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="選擇性別" id="Exz-Vu-c2Z"/>
+                    <connections>
+                        <outlet property="btn_man" destination="UlY-Vm-ABZ" id="19l-B0-vxG"/>
+                        <outlet property="btn_mix" destination="Ncu-ds-7HH" id="6rc-Kh-WHk"/>
+                        <outlet property="btn_woman" destination="Fep-fy-UWp" id="2DX-F4-gDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xra-ja-yR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="134"/>
+        </scene>
+        <!--選擇年齡-->
+        <scene sceneID="2eG-t7-miX">
+            <objects>
+                <viewController id="5Om-EI-Rv5" customClass="YearViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZJ-t8-bb4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WMi-Qi-b3Y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZJ-Hs-kVB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                        <state key="normal" title="Button" image="baby"/>
+                                        <connections>
+                                            <segue destination="Jpb-0j-MTk" kind="show" identifier="Young" id="IxV-Jn-lQW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgi-xl-3nf">
+                                        <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
+                                        <state key="normal" title="Button" image="young"/>
+                                        <connections>
+                                            <segue destination="Jpb-0j-MTk" kind="show" identifier="Strong" id="W2W-3K-cgh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-0Q-Pjk">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="151"/>
+                                        <state key="normal" title="Button" image="forman"/>
+                                        <connections>
+                                            <segue destination="Jpb-0j-MTk" kind="show" identifier="Old" id="8P7-RF-o61"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAo-g9-H8A">
+                                        <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
+                                        <state key="normal" title="Button" image="wisdom"/>
+                                        <connections>
+                                            <segue destination="Jpb-0j-MTk" kind="show" identifier="Wisdom" id="Ahx-GK-KPq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WMi-Qi-b3Y" firstAttribute="leading" secondItem="YUt-DY-5xy" secondAttribute="leading" id="1A6-lf-Rjz"/>
+                            <constraint firstItem="YUt-DY-5xy" firstAttribute="trailing" secondItem="WMi-Qi-b3Y" secondAttribute="trailing" id="KJQ-cg-VK4"/>
+                            <constraint firstItem="WMi-Qi-b3Y" firstAttribute="top" secondItem="YUt-DY-5xy" secondAttribute="top" id="kYQ-NX-lX4"/>
+                            <constraint firstItem="YUt-DY-5xy" firstAttribute="bottom" secondItem="WMi-Qi-b3Y" secondAttribute="bottom" id="t6D-EL-yIO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YUt-DY-5xy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="選擇年齡" id="ySf-6V-usI"/>
+                    <connections>
+                        <outlet property="btn_old" destination="hK8-0Q-Pjk" id="GQV-0O-BBK"/>
+                        <outlet property="btn_strong" destination="wgi-xl-3nf" id="b0y-l0-iqr"/>
+                        <outlet property="btn_wisdom" destination="IAo-g9-H8A" id="Mio-NF-WAM"/>
+                        <outlet property="btn_young" destination="1ZJ-Hs-kVB" id="3HG-8w-3qT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2w-HH-m2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="134"/>
+        </scene>
+        <!--浪浪們-->
+        <scene sceneID="CIp-vM-t9Q">
+            <objects>
+                <tableViewController id="Jpb-0j-MTk" customClass="AnimalsTableViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2mY-oy-dUP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="250" id="jyX-Ax-k8V" customClass="AnimalsTableViewCell" customModule="AnimalsNeedHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jyX-Ax-k8V" id="Fwb-7s-uEY" customClass="AnimalsTableViewCell" customModule="AnimalsNeedHome" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Or9-yO-jCQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gql-dD-NVW">
+                                            <rect key="frame" x="122" y="205" width="131" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="animals_name" destination="Gql-dD-NVW" id="qfn-ur-ieb"/>
+                                    <outlet property="img_animals" destination="Or9-yO-jCQ" id="Nhx-av-mZ7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jpb-0j-MTk" id="8IE-e1-b52"/>
+                            <outlet property="delegate" destination="Jpb-0j-MTk" id="dsn-xh-afy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="浪浪們" id="weq-oF-4vU"/>
+                    <connections>
+                        <segue destination="qJK-pV-gM9" kind="show" id="pP5-33-VtS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grq-Oa-A29" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Nm9-19-9JT">
+            <objects>
+                <viewController storyboardIdentifier="animalResult" id="qJK-pV-gM9" customClass="WebViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIw-95-C3U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbi-uA-em1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="598"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cru-71-OvL"/>
+                    </view>
+                    <connections>
+                        <outlet property="web_animal" destination="zbi-uA-em1" id="TMB-ab-dK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8Z-f9-xAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3397.5999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baby" width="637" height="287"/>
+        <image name="cat_dark" width="960" height="640"/>
+        <image name="dog_dark" width="960" height="689"/>
+        <image name="forman" width="957" height="387"/>
+        <image name="man" width="1501" height="1501"/>
+        <image name="mix" width="901" height="720"/>
+        <image name="other_dark" width="800" height="600"/>
+        <image name="wisdom" width="958" height="445"/>
+        <image name="woman" width="1501" height="1501"/>
+        <image name="young" width="3879" height="1930"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ahx-GK-KPq"/>
+        <segue reference="q4s-CM-Xmu"/>
+        <segue reference="nOC-CS-v9f"/>
+    </inferredMetricsTieBreakers>
 </document>
