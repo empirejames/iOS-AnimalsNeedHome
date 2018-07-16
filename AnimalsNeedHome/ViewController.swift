@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         let dogTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
         dogTitle.text = "找狗狗"
         dogTitle.font =  dogTitle.font.withSize(40)

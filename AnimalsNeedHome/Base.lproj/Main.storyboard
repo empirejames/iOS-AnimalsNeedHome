@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-644" y="134"/>
         </scene>
-        <!--選擇種類-->
+        <!--要找誰呢-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalsNeedHome" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +73,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="選擇種類" id="lSB-7j-tL1"/>
+                    <navigationItem key="navigationItem" title="要找誰呢" id="lSB-7j-tL1">
+                        <barButtonItem key="backBarButtonItem" title="上一頁" id="YDC-p9-3eb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn_cat" destination="nTM-CA-Asn" id="6jD-dH-aP7"/>
                         <outlet property="btn_dog" destination="jVb-3c-o0W" id="53h-pk-NEY"/>
@@ -128,7 +130,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dmg-rJ-wz8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="選擇性別" id="Exz-Vu-c2Z"/>
+                    <navigationItem key="navigationItem" title="選擇性別" id="Exz-Vu-c2Z">
+                        <barButtonItem key="backBarButtonItem" title="上一頁" id="cSS-rJ-PKV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn_man" destination="UlY-Vm-ABZ" id="19l-B0-vxG"/>
                         <outlet property="btn_mix" destination="Ncu-ds-7HH" id="6rc-Kh-WHk"/>
@@ -190,7 +194,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUt-DY-5xy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="選擇年齡" id="ySf-6V-usI"/>
+                    <navigationItem key="navigationItem" title="選擇年齡" id="ySf-6V-usI">
+                        <barButtonItem key="backBarButtonItem" title="上一頁" id="rX2-P5-4Em"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn_old" destination="hK8-0Q-Pjk" id="GQV-0O-BBK"/>
                         <outlet property="btn_strong" destination="wgi-xl-3nf" id="b0y-l0-iqr"/>
@@ -242,7 +248,9 @@
                             <outlet property="delegate" destination="Jpb-0j-MTk" id="dsn-xh-afy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="浪浪們" id="weq-oF-4vU"/>
+                    <navigationItem key="navigationItem" title="浪浪們" id="weq-oF-4vU">
+                        <barButtonItem key="backBarButtonItem" title="回到浪浪們" id="QOK-vG-vSP"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="qJK-pV-gM9" kind="show" id="pP5-33-VtS"/>
                     </connections>
@@ -259,16 +267,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbi-uA-em1">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbi-uA-em1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="598"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-rt-h6J">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdU-kU-amZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                        <state key="normal" title="我要認養">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-rM-GTN">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                        <state key="normal" title="寵物所在地">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="47g-zD-GDz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GUP-rt-h6J" firstAttribute="leading" secondItem="zbi-uA-em1" secondAttribute="leading" id="DFI-lt-bqG"/>
+                            <constraint firstItem="GUP-rt-h6J" firstAttribute="bottom" secondItem="Cru-71-OvL" secondAttribute="bottom" id="LD7-dp-FrE"/>
+                            <constraint firstItem="zbi-uA-em1" firstAttribute="top" secondItem="Cru-71-OvL" secondAttribute="top" id="LXT-Jh-FYI"/>
+                            <constraint firstItem="GUP-rt-h6J" firstAttribute="trailing" secondItem="zbi-uA-em1" secondAttribute="trailing" id="gBB-1w-Rmq"/>
+                            <constraint firstItem="Cru-71-OvL" firstAttribute="trailing" secondItem="GUP-rt-h6J" secondAttribute="trailing" id="h4O-wP-tGY"/>
+                            <constraint firstItem="GUP-rt-h6J" firstAttribute="leading" secondItem="Cru-71-OvL" secondAttribute="leading" id="psT-5N-PRL"/>
+                            <constraint firstItem="Cru-71-OvL" firstAttribute="bottom" secondItem="zbi-uA-em1" secondAttribute="bottom" constant="5" id="zfj-82-HYa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cru-71-OvL"/>
                     </view>
                     <connections>
+                        <outlet property="btn_adopt" destination="YdU-kU-amZ" id="An2-1a-KZ9"/>
+                        <outlet property="btn_location" destination="d2a-rM-GTN" id="ygx-PI-div"/>
                         <outlet property="web_animal" destination="zbi-uA-em1" id="TMB-ab-dK1"/>
                     </connections>
                 </viewController>
