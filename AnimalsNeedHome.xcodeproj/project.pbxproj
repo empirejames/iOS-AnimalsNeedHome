@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2E701BA3F711B69BD8F3D710 /* Pods-AnimalsNeedHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalsNeedHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimalsNeedHome/Pods-AnimalsNeedHome.release.xcconfig"; sourceTree = "<group>"; };
 		8F92EB4FE1958AF79179A322 /* Pods-AnimalsNeedHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalsNeedHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimalsNeedHome/Pods-AnimalsNeedHome.debug.xcconfig"; sourceTree = "<group>"; };
+		F6113F5321C1159E00531FBE /* AnimalsNeedHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimalsNeedHome.entitlements; sourceTree = "<group>"; };
 		F66B210A20F88E700027D8EA /* AnimalsNeedHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalsNeedHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66B210D20F88E700027D8EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66B210F20F88E700027D8EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F66B210C20F88E700027D8EA /* AnimalsNeedHome */ = {
 			isa = PBXGroup;
 			children = (
+				F6113F5321C1159E00531FBE /* AnimalsNeedHome.entitlements */,
 				F66B210D20F88E700027D8EA /* AppDelegate.swift */,
 				F66B210F20F88E700027D8EA /* ViewController.swift */,
 				F66B211120F88E700027D8EA /* Main.storyboard */,
@@ -156,6 +158,9 @@
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
 							};
 						};
 					};
