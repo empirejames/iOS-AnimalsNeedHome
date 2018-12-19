@@ -33,9 +33,9 @@ class WebViewController: UIViewController, UIWebViewDelegate , MFMailComposeView
     
     var stringArray: [String] = []
     var WEB_URL = "http://163.29.36.110/html/Aml_animalCon.aspx?Aid="
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        web_animal.delegate = self
         btn_adopt.backgroundColor = UIColor(red: 251/255, green: 86/255, blue: 7/255, alpha: 1)
         btn_location.backgroundColor = UIColor(red: 113/255, green: 168/255, blue: 192/255, alpha: 1)
         
@@ -43,12 +43,22 @@ class WebViewController: UIViewController, UIWebViewDelegate , MFMailComposeView
         if let url = URL(string: WEB_URL + stringArray[0] + "&Tid=" + stringArray[1]) {
             print(url)
             let request = URLRequest(url: url)
-            web_animal.scalesPageToFit = true
-            web_animal.contentMode = .scaleAspectFit
 
-            
+            web_animal.contentMode = .scaleAspectFit
             web_animal.loadRequest(request)
+            web_animal.delegate = self
+            
         }
+    }
+    func webViewDidFinishLoad(_ webView : UIWebView) {
+        let contentSize:CGSize = web_animal.scrollView.contentSize
+        let viewSize:CGSize = self.view.bounds.size
+        let rw = viewSize.width / contentSize.width
+        web_animal.scrollView.minimumZoomScale = rw
+        web_animal.scrollView.maximumZoomScale = rw
+        web_animal.scrollView.zoomScale = rw
+        web_animal.scalesPageToFit = true;
+        print("rw = \(rw)")
     }
     
     override func didReceiveMemoryWarning() {

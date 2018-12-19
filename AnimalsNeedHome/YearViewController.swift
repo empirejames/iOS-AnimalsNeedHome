@@ -25,6 +25,13 @@ class YearViewController: UIViewController {
         youngTitle.textAlignment = NSTextAlignment.left
         btn_young.addSubview(youngTitle)
         
+        let youngDescription = UILabel(frame: CGRect(x:5,y:35,width:200,height:50))
+        youngDescription.text = "3個月齡以下"
+        youngDescription.font =  youngDescription.font.withSize(15)
+        youngDescription.textColor = UIColor.white
+        youngDescription.textAlignment = NSTextAlignment.left
+        btn_young.addSubview(youngDescription)
+        
         
         let strongTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
         strongTitle.text = "年輕力壯"
@@ -32,7 +39,13 @@ class YearViewController: UIViewController {
         strongTitle.textColor = UIColor.white
         strongTitle.textAlignment = NSTextAlignment.left
         btn_strong.addSubview(strongTitle)
-       
+        
+        let strongDescription = UILabel(frame: CGRect(x:5,y:35,width:200,height:50))
+        strongDescription.text = "3個月齡至1年"
+        strongDescription.font =  strongDescription.font.withSize(15)
+        strongDescription.textColor = UIColor.white
+        strongDescription.textAlignment = NSTextAlignment.left
+        btn_strong.addSubview(strongDescription)
         
         let mainTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
         mainTitle.text = "成熟穩重"
@@ -40,6 +53,13 @@ class YearViewController: UIViewController {
         mainTitle.textColor = UIColor.white
         mainTitle.textAlignment = NSTextAlignment.left
         btn_old.addSubview(mainTitle)
+        
+        let mainDescription = UILabel(frame: CGRect(x:5,y:35,width:200,height:50))
+        mainDescription.text = "1至7歲"
+        mainDescription.font =  mainDescription.font.withSize(15)
+        mainDescription.textColor = UIColor.white
+        mainDescription.textAlignment = NSTextAlignment.left
+        btn_old.addSubview(mainDescription)
        
         
         let oldTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
@@ -48,6 +68,13 @@ class YearViewController: UIViewController {
         oldTitle.textColor = UIColor.white
         oldTitle.textAlignment = NSTextAlignment.left
         btn_wisdom.addSubview(oldTitle)
+        
+        let oldDescription = UILabel(frame: CGRect(x:5,y:35,width:200,height:50))
+        oldDescription.text = "7歲以上"
+        oldDescription.font =  oldDescription.font.withSize(15)
+        oldDescription.textColor = UIColor.white
+        oldDescription.textAlignment = NSTextAlignment.left
+        btn_wisdom.addSubview(oldDescription)
         // Do any additional setup after loading the view.
     }
     

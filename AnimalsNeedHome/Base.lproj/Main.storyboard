@@ -363,11 +363,11 @@
         <image name="cat_dark" width="960" height="640"/>
         <image name="dog_dark" width="960" height="689"/>
         <image name="forman" width="957" height="387"/>
-        <image name="man" width="1501" height="1501"/>
+        <image name="man" width="720.47998046875" height="720.47998046875"/>
         <image name="mix" width="901" height="720"/>
         <image name="other_dark" width="800" height="600"/>
         <image name="wisdom" width="958" height="445"/>
-        <image name="woman" width="1501" height="1501"/>
+        <image name="woman" width="720.47998046875" height="720.47998046875"/>
         <image name="young" width="3879" height="1930"/>
     </resources>
     <inferredMetricsTieBreakers>
