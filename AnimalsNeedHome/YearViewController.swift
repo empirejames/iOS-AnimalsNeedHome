@@ -18,6 +18,11 @@ class YearViewController: UIViewController {
         super.viewDidLoad()
         
         
+        btn_young.imageView?.contentMode = .scaleAspectFill
+        btn_strong.imageView?.contentMode = .scaleAspectFill
+        btn_old.imageView?.contentMode = .scaleAspectFill
+        btn_wisdom.imageView?.contentMode = .scaleAspectFill
+        
         let youngTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
         youngTitle.text = "初生之犢"
         youngTitle.font =  youngTitle.font.withSize(40)

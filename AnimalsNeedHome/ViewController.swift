@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        btn_dog.imageView?.contentMode = .scaleAspectFill
+        btn_cat.imageView?.contentMode = .scaleAspectFill
+        btn_other.imageView?.contentMode = .scaleAspectFill
     
         let dogTitle = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
         dogTitle.text = "找狗狗"

@@ -59,11 +59,12 @@ class AnimalsTableViewController: UITableViewController {
         return recentAnimal.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var pic_URL = "http://163.29.36.110/uploads/images/medium/"
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnimalsTableViewCell
+        let pic_URL = "http://163.29.36.110/uploads/images/medium/"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnimalsTableViewCell
         let animal = recentAnimal[indexPath.row]
-        var topicName:String! = animal.name
-        var img_url:String! = animal.pic
+        let topicName:String! = animal.name
+        let img_url:String! = animal.pic
+    
         
         if (topicName.isEmpty) {
             cell.animals_name.text = "無名"
